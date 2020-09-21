@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    {{>header}}
+    <div class='mainDiv'>
+        <div class='searchDiv'>
+            <h2 class='subheading'>Search for the weather</h2>
+            <input type="text" class='input' placeholder='search "town city country"'>
+        </div>
+    </div>
+    {{>footer}}
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src='./js/clientRequest.js'></script>
+</body>
+</html>
