@@ -4,6 +4,8 @@ const hbs = require('hbs');
 const { get } = require('http');
 const app = express();
 const weatherStack = require('./utils/weatherStack');
+require('dotenv').config();
+console.log(process.env);
 //setup filepaths to config
 const publicDirectoryPath = path.join(__dirname, '../public');
 const viewsPath = path.join(__dirname, '../templates/views');

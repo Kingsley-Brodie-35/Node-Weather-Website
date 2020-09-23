@@ -1,7 +1,11 @@
 const request = require('request');
+const path = require('path');
+const env = path.join(__dirname, '../../.env');
+require('dotenv').config({ path: env });
 const weatherStackFunc = (location, callback) => {
+	const apiKey = process.env.API_KEY;
 	const coords = location;
-	const url = `http://api.weatherstack.com/current?access_key=582a809471ad29cb4612d95b5bbe3e19&query=${coords}`;
+	const url = `http://api.weatherstack.com/current?access_key=${apiKey}&query=${coords}`;
 	console.log(url);
 	request({ url: url, json: true }, (error, response) => {
 		if (response.body.success == false) {
