@@ -6,7 +6,6 @@ const weatherStackFunc = (location, callback) => {
 	const apiKey = process.env.API_KEY;
 	const coords = location;
 	const url = `http://api.weatherstack.com/current?access_key=${apiKey}&query=${coords}`;
-	console.log(url);
 	request({ url: url, json: true }, (error, response) => {
 		if (response.body.success == false) {
 			callback('please enter a valid location');

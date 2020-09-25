@@ -1,7 +1,7 @@
 const input = document.querySelector('.input');
 input.addEventListener('keypress', (e) => {
 	if (e.key === 'Enter') {
-		const endpoint = `http://localhost:3000/weather?address=${input.value}`;
+		const endpoint = `/weather?address=${input.value}`;
 		const req = axios.get(endpoint).then((response) => {
 			if (response.data.error) {
 				//creating message
@@ -23,7 +23,6 @@ input.addEventListener('keypress', (e) => {
 				});
 			} else {
 				const { name, city, country, temp, description, icon, windspeed, date, time } = response.data.response;
-				console.log(response);
 				//defining variables
 				const pageDiv = document.querySelector('.mainDiv');
 				//creating div structure

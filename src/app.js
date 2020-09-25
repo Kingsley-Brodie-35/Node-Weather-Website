@@ -5,11 +5,10 @@ const { get } = require('http');
 const app = express();
 const weatherStack = require('./utils/weatherStack');
 require('dotenv').config();
-console.log(process.env);
+const port = process.env.PORT || 3000;
 //setup filepaths to config
 const publicDirectoryPath = path.join(__dirname, '../public');
 const viewsPath = path.join(__dirname, '../templates/views');
-const viewsAboutPath = path.join(__dirname, '../templates/views/about');
 const viewsHelpPath = path.join(__dirname, '../templates/views/help');
 const errorPath = path.join(__dirname, '../templates/views/fourOFour');
 const partialsPath = path.join(__dirname, '../templates/partials');
@@ -27,17 +26,9 @@ app.get('', (req, res) => {
 	});
 });
 
-app.get('/about', (req, res) => {
-	res.render(viewsAboutPath, {
-		title: 'About Us',
-		name: 'Kingsley Brodie'
-	});
-});
-
 app.get('/help', (req, res) => {
 	res.render(viewsHelpPath, {
-		title: 'help',
-		apiKey: 43234569281056,
+		title: 'Help',
 		name: 'Kingsley Brodie'
 	});
 });
@@ -72,6 +63,6 @@ app.get('*', (req, res) => {
 	});
 });
 
-app.listen(3000, () => {
-	console.log('server up, visit localhost:3000');
+app.listen(port, () => {
+	console.log(`server up, visit localhost:${port}`);
 });

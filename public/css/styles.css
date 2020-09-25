@@ -4,8 +4,14 @@ body {
 	padding: 0;
 	position: relative;
 }
+.section1 {
+	min-height: 70vh;
+	display: flex;
+	justify-items: center;
+	align-items: center;
+}
 .mainDiv {
-	width: 40%;
+	width: 60%;
 	margin: auto;
 	border: 1px solid #a9a587;
 	display: flex;
@@ -27,7 +33,7 @@ input {
 	border: none;
 	border-bottom: 1px solid #605b56;
 	height: 50px;
-	width: 33%;
+	width: 40%;
 	font-size: 16px;
 	padding: -5px;
 	margin: 20px;
@@ -45,31 +51,37 @@ h2 {
 }
 .jsDiv {
 	display: flex;
+	width: 50%;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	width: 100%;
 }
 /* Div one items */
 .divOne {
-	width: 80%;
+	width: 100%;
 	display: flex;
 	flex-direction: column;
-	justify-self: center;
+	justify-content: center;
+	align-items: flex-start;
 }
 .locationHeading {
+	width: fit-content;
 	margin: 5px;
 	padding: 0px;
 }
 .date {
+	width: fit-content;
 	margin: 5px;
 	padding: 0px;
+	align-self: flex-start;
 }
 /* div two items */
 .divTwo {
 	display: flex;
 	flex-direction: row;
-	width: 80%;
+	justify-content: flex-start;
+	align-items: flex-start;
+	width: 100%;
 	margin-top: 20px;
 }
 .subDiv {
@@ -88,20 +100,22 @@ h2 {
 }
 img {
 	height: 100px;
-	margin-left: 50px;
+	margin-left: auto;
 }
 /* divThree */
 .divThree {
 	display: flex;
 	flex-direction: column;
-	width: 80%;
+	width: 100%;
 	margin-bottom: 20px;
 }
 .descpDom {
+	width: fit-content;
 	font-size: 18px;
 	margin: 5px;
 }
 .windDom {
+	width: fit-content;
 	font-size: 18px;
 	margin: 5px;
 }
@@ -110,7 +124,6 @@ img {
 	width: 100%;
 	display: flex;
 	flex-direction: row;
-	margin-bottom: 100px;
 	justify-content: space-between;
 	background-color: #453f78;
 }
@@ -162,4 +175,103 @@ a:active {
 	position: absolute;
 	bottom: 0px;
 	right: 10px;
+}
+/* help page */
+.hSection1 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 50vh;
+}
+.hDiv1 {
+	display: flex;
+	flex-direction: column;
+	width: 80%;
+}
+@media (min-width: 100px) and (max-width: 1200px) {
+	.jsDiv {
+		width: 80%;
+	}
+}
+@media (min-width: 100px) and (max-width: 1020px) {
+	.searchDiv {
+		flex-direction: column;
+		height: auto;
+		margin: 0px 0px 20px 0px;
+	}
+	input {
+		margin-top: 0px;
+		border: 1px solid #242424;
+		width: 60%;
+		height: 60px;
+	}
+	.subheading {
+		margin-bottom: 15px;
+		text-align: center;
+	}
+}
+@media (min-width: 100px) and (max-width: 1020px) {
+	.divTwo {
+		flex-direction: column;
+		margin-bottom: 20px;
+	}
+	img {
+		margin-left: 0px;
+	}
+}
+@media (min-width: 100px) and (max-width: 750px) {
+	.mainDiv {
+		width: 100%;
+		border: none;
+	}
+	.navHeading {
+		font-size: 24px;
+	}
+}
+@media (min-width: 100px) and (max-width: 400px) {
+	.locationHeading {
+		font-size: 1rem;
+	}
+	.tempDescp {
+		font-size: 20px;
+	}
+	.temp {
+		font-size: 30px;
+	}
+	img {
+		height: 70px;
+	}
+	.descpDom {
+		font-size: 16px;
+	}
+	.tempDescp {
+		font-size: 16px;
+	}
+	.footer {
+		height: 70px;
+	}
+	.nav {
+		flex-direction: column;
+	}
+	.navDivTwo {
+		margin-bottom: 10px;
+		justify-content: center;
+	}
+	.navDivOne {
+		margin: 0px;
+	}
+	.navHeading {
+		text-align: center;
+	}
+	.navLink1 {
+		margin-right: 10px;
+		text-decoration: underline;
+	}
+	.navLink2 {
+		margin-left: 10px;
+		text-decoration: underline;
+	}
+	.hSection1 {
+		height: 70vh;
+	}
 }
